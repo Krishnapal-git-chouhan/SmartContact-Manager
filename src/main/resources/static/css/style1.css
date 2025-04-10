@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+.sidebar{
+	width:18%;
+	background: white;
+	position: fixed;
+	height: 100%;
+	padding-top: 75px;
+}
+
+.sidebar a{
+	display: block;
+	width: 100;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: gray;
+}
+
+.sidebar a:hover{
+	background: #e2e2e2;
+}
+
+.sidebar .divider{
+	height: 5px;
+	width: 100%;
+	margin-top: 10%;
+	background: #e2e2e2;
+}
+
+@media only screen and (max-width: 600px){
+	.sidebar{
+	display:none;
+	width:18% !important;
+	background: white;
+	position: fixed;
+	height: 100%;
+	padding-top: 20px;
+}
+    .content{
+       margin-left: 10px;
+    }
+
+}
+
+.content{
+	margin-left:20%;
+	
+       padding-top: 75px;
+}
+
+.sidebar .crs_btn{
+	position: absolute;
+	top: 0;
+	right: 35px;
+	font-size: 36px;
+	cursor: pointer;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ th:replace="~{normal/base::layout(~{::section})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ 
+    
+     <section>
+     
+             <div class="card">
+        
+        
+        
+           <div class="card-body">
+             <h1 class="text-center">Update Contact</h1>
+               <div class="container-fluid mt-1 row-gap:3px">
+                 <div class="row">
+                   <div class="col-md-10 offset-md-1">
+                    <form action="#" th:object="${contact}" enctype="multipart/form-data"
+    method="post" th:action="@{/user/process-update}" class="mt-2">
+
+    <!-- First Name -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <i class="fa fa-user"></i>
+            </div>
+        </div>
+        <input th:value="${contact.name}" required min="3" max="12" type="text" id="firstName" name="name" placeholder="Enter firstname" class="form-control">
+    </div>
+
+    <!-- Last Name -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <i class="fa fa-user"></i>
+            </div>
+        </div>
+        <input required min="2" max = "7" type="text" id="secondName" name="secondName" placeholder="Enter last name" class="form-control">
+    </div>
+
+    <!-- Work -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <i class="fa fa-briefcase"></i>
+            </div>
+        </div>
+        <input input th:value="${contact.work}"  required type="text" id="work" name="work" placeholder="Enter Work" class="form-control">
+    </div>
+
+    <!-- Email -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <i class="fa fa-envelope"></i>
+            </div>
+        </div>
+        <input input th:value="${contact.email}"  required type="email" id="email" name="email" placeholder="Enter email" class="form-control">
+    </div>
+
+    <!-- Phone -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <i class="fa fa-phone"></i>
+            </div>
+        </div>
+        <input required min = "10" max = "12" type="text" id="phone" name="phone" placeholder="Enter phone" class="form-control">
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+        <textarea  th:value="${contact.description}"  id="textarea" placeholder="Enter description" name="description"  class="form-control"></textarea>
+    </div>
+
+    <!-- Image Upload -->
+    <!-- <div class="form-img mb-3">
+        <input type="file" name="image">
+    </div>  -->
+    
+    <!-- Image Upload -->
+<!-- <div class="form-group">
+    <label for="image">Upload Image</label>
+    <input type="file" name="image" id="image" accept="image/*" class="form-control" required onchange="previewImage(event)">
+    <img id="preview" src="#" alt="Image Preview" class="img-thumbnail mt-2" style="display: none; max-width: 200px;">
+</div>  -->
+    
+        <button type="submit">submit</button>
+     </section>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"
+th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+   <h1>wellcome</h1>
+  <!--  <section class="banner d-flex flex-column justify-content-center align-items-center text-center py-5">
+  <div>
+    <h1 class="fw-bold text-dark">Smart Contact Manager</h1>
+  </div>
+  
+  <p class="mt-3 text-muted px-3">
+    Start collecting your contacts in a smarter way. We provide an efficient and intelligent solution for managing your contacts.
+  </p>
+
+  <button class="btn btn-primary btn-lg mt-3">Get Started</button>
+</section> -->
+
+<section>
+   <div class="container text-center">
+    <h1 class="fw-bold">Smart Contact Manager</h1>
+    <p class="mt-3 description">
+      Start collecting your contacts in a smarter way. We provide an efficient and intelligent solution for managing your contacts.
+    </p>
+    <button class="btn btn-primary btn-lg mt-3">Get Started</button>
+  </div>
+</section>
+
+</body>
+</html>
